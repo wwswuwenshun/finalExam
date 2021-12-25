@@ -10,6 +10,7 @@ app.use(require("cors")()); //解决拦截跨源请求问题
 
 // 引入模板引擎，设置模板引擎加载资源的后缀名
 app.use(express.static(__dirname+"/views",{index:"login.html"}))//默认首页
+
 app.use(express.static(path.join(__dirname, "public"))); //将静态资源放在public目录
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
