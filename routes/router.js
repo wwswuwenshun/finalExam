@@ -10,11 +10,11 @@ var responseData; //定义全局变量
 var User = require('../models/users');
  
 /* /根路径 跳转至login.html */
-router.get('/', function(req, res, next) {
+router.get('/login.html', function(req, res, next) {
   res.sendfile('./views/login.html'); 
 });
 /* /a 跳转至register.html */
-router.get('/a', function(req, res, next) {
+router.get('/register.html', function(req, res, next) {
   res.sendfile('./views/register.html'); 
 });
  

@@ -1,14 +1,24 @@
 <html>
 <head><meta charset='utf-8'/><title>weilcom!!</title>
-
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      href="css/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+    />
+	<link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
 	<title>welcome</title>
-    <h1>登录页面</h1>
-   <div>
-        <form action="/login" method="post">
+    <header class="app-header navbar">
+		<a class="navbar-brand" href="#" style="margin: 0 auto">
+		  <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i
+		  >成绩管理系统登陆
+		</a>
+	  </header>
+   <div class="modal-body">
+        <form action="/login" method="post" class="edit-validation">
             <p>
-                <label for="username">管理员名</label>
+                <label for="username">账号 : </label>
                 <input type="text" id="username" name="username" placeholder="用户名">
             </p>
             <p>
@@ -18,8 +28,9 @@
             <p>
                 <input type="submit" value="登录">
             </p>
-			<a href="register.html"> 去注册 </a>
+			
         </form>
     </div>
+	<a href="register.html">注册页面</a>
 </body>
 </html>
