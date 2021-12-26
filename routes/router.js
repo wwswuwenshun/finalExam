@@ -38,7 +38,7 @@ router.post('/login', function (req, res) {
     }, function (err, data) {
         if(err) throw err;
         if(data){
-            res.send('登录成功');
+            res.render('/home/user1/finalExam/views/index.html')
         }else{
             res.send('账号或密码错误')
         }

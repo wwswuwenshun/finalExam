@@ -5,6 +5,7 @@ const mongoose = require("mongoose"); //加载数据库模块
 var bodyParser = require("body-parser"); //加载body-parser处理post提交的数据
 const path = require("path");
 cp = require("child_process"); // 可自动打开浏览器模块
+
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(require("cors")()); //解决拦截跨源请求问题
 
 // 引入模板引擎，设置模板引擎加载资源的后缀名
-app.use(express.static(__dirname+"/views",{index:"login.html"}));//默认设置首页
+//app.use(express.static(__dirname+"/views",{index:"login.html"}));//默认设置首页
 app.use(express.static(path.join(__dirname, "public"))); //将静态资源放在public目录
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
