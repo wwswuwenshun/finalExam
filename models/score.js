@@ -1,10 +1,9 @@
 var mongoose = require("mongoose");
 // 用户的表结构对象
+var Schema = mongoose.Schema;
 var scoreSchema = new mongoose.Schema({
   Sno: Number, //学号
   Sname: String, //姓名
-  username: Number,//用户名
-  Password: Number, //密码
   machine_learning: Number, //机器学习
   nodejs: Number, //大前端
   microservice: Number, //微服务

@@ -4,59 +4,22 @@
 </head>
 <body>
 	<title>welcome</title>
-    <h2>欢迎使用学生成绩管理系统</h2>
-	<form >
-		<p><input type='text' placeholder='管理员账号' id='username'/>
-		</p>
-		<p><input type='password' placeholder='密码' id='psw1' name='psw1'/>
-		</p>
-		
-		<p><button type='button' id='login'>登陆</button></p>
-        <p><a href='/register.html'>注册</a></p>
-	</form>
-	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
-	<script type="text/javascript" >
-		$(function(){
-			
-			$('#login').click(function(){
-				var username=$('#username').val();
-				var psw1=$('#psw1').val();
-				
-				var data={'name':username,'psw':psw1};
-				
-				if(!username){
-					
-					$('body').prepend('<div style="color:red;">用户名不能为空</div>');
-				}
-				else {
-					
-					$.ajax({
-						url:'/login',
-						type:'post',
-						data:data,
-						success:function(data,status){
-							if(status=='success'){
-								
-								location.href='home';
-
-							}
-						},
-						error:function(data,err){
-							console.log('ajax fail');
-							location.href='login';
-						}
-
-					})
-					
-				}
-			});
-			
-
-			$('#register').click(function(){
-				location.href='register';
-				
-			});
-		})
-	</script>
+    <h1>登录页面</h1>
+   <div>
+        <form action="/login" method="post">
+            <p>
+                <label for="username">管理员名</label>
+                <input type="text" id="username" name="username" placeholder="用户名">
+            </p>
+            <p>
+                <label for="password">密码 : </label>
+                <input type="text" id="password" name="password" placeholder="密码">
+            </p>
+            <p>
+                <input type="submit" value="登录">
+            </p>
+			<a href="register.html"> 去注册 </a>
+        </form>
+    </div>
 </body>
 </html>
